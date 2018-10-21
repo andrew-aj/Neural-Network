@@ -8,13 +8,9 @@ using namespace std;
 
 vector<double> vmath::vadd(vector<double> v1, vector<double> v2) {
 
-	vector<double> returnVector = vector<double>();
+	vector<double> returnVector = vector<double>(v1.size());
 
-	for (int x = 0; x < v1.size(); x++) {
-
-		returnVector.push_back(v1[x] + v2[x]);
-
-	}
+	transform(v1.begin(), v1.end(), v2.begin(), returnVector.begin(), plus<double>());
 
 	return returnVector;
 
@@ -22,13 +18,9 @@ vector<double> vmath::vadd(vector<double> v1, vector<double> v2) {
 
 vector<double> vmath::vsub(vector<double> v1, vector<double> v2) {
 
-	vector<double> returnVector = vector<double>();
+	vector<double> returnVector = vector<double>(v1.size());
 
-	for (int x = 0; x < v1.size(); x++) {
-
-		returnVector.push_back(v1[x] - v2[x]);
-
-	}
+	transform(v1.begin(), v1.end(), v2.begin(), returnVector.begin(), minus<double>());
 
 	return returnVector;
 
@@ -36,27 +28,18 @@ vector<double> vmath::vsub(vector<double> v1, vector<double> v2) {
 
 vector<double> vmath::vmul(vector<double> v1, vector<double> v2) {
 
-	vector<double> returnVector = vector<double>();
+	vector<double> returnVector = vector<double>(v1.size());
 
-	for (int x = 0; x < v1.size(); x++) {
-
-		returnVector.push_back(v1[x] * v2[x]);
-
-	}
-
+	transform(v1.begin(), v1.end(), v2.begin(), returnVector.begin(), multiplies<double>());
 	return returnVector;
 
 }
 
 vector<double> vmath::vdiv(vector<double> v1, vector<double> v2) {
 
-	vector<double> returnVector = vector<double>();
+	vector<double> returnVector = vector<double>(v1.size());
 
-	for (int x = 0; x < v1.size(); x++) {
-
-		returnVector.push_back(v1[x] / v2[x]);
-
-	}
+	transform(v1.begin(), v1.end(), v2.begin(), returnVector.begin(), divides<double>());
 
 	return returnVector;
 
