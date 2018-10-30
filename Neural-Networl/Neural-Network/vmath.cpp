@@ -45,6 +45,17 @@ vector<double> vmath::vdiv(vector<double> v1, vector<double> v2) {
 
 }
 
+vector<double> vmath::vpow(vector<double> v1, vector<double> v2) {
+
+	vector<double> returnVector = vector<double>(v1.size());
+	for (int x = 0; x < v1.size(); x++) {
+		returnVector[x] = pow(v1[x], v2[x]);
+
+	}
+	return returnVector;
+
+}
+
 double vmath::vsum(vector<double> vector) {
 
 	double sum = 0;
