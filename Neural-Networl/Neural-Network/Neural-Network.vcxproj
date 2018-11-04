@@ -153,12 +153,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="activationFunctions.h" />
+    <ClInclude Include="neuron.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="vmath.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="activationFunctions.cpp" />
     <ClCompile Include="Neural-Network.cpp" />
+    <ClCompile Include="neuron.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
