@@ -14,7 +14,7 @@ vmath vm;
 vector<double> neuron::feedforward(vector<double> iNeurons, int numHNeurons, vector< vector<double> > &ihWeights) {
 
 	vector<double> hNeuronsSum = vector<double>();
-	for (int h = 0; h < 10; h++) {
+	for (int h = 0; h < numHNeurons; h++) {
 		vector<double> nWeight = vector<double>();
 		for (int k = 0; k < ihWeights[h].size(); k++) {
 			double weight = ihWeights[h][k];
